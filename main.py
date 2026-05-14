@@ -4,8 +4,6 @@ import data
 batch_size = 60
 num_epochs = 200
 
-# TODO: make that graph thing that shows accuracy on the diagonal
-
 x_train, y_train, x_test, y_test = data.get_data()
 # training data is already flat
 
@@ -31,7 +29,6 @@ class Layer:
 
     def forward(self, prev_layer):
         return np.dot(prev_layer, self.weights) + self.biases
-
 
 
 '''
